@@ -7,7 +7,4 @@ import (
 
 func main()  {
 	fmt.Println("hello word", runtime.GOOS)
-
-
-
 }
