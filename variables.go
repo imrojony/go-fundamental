@@ -19,12 +19,20 @@ func main()  {
 
 	fmt.Println("name is set to ", name , " and is type of ", reflect.TypeOf(name))
 	fmt.Println("module is set to ",module, " and is type of ",reflect.TypeOf(module))
+	changename(&name)
+	fmt.Println(name)
 
-	fmt.Println(changecousre(course))
+	changecousre(&course)
 	fmt.Println(course)
 }
-func changecousre(course string)  string{
-	course ="php course"
-	//fmt.Println(course)
-	return course
+func changecousre(course *string)  string{
+	*course ="php course"
+	fmt.Println(*course)
+	return *course
+}
+func changename(name *string)  string{
+	*name="romony"
+	fmt.Println(*name)
+	return *name
+
 }
